@@ -110,6 +110,8 @@ int main(){
         cout << "4. Mencari data dalam list"<< endl;
         cout << "5. Exit"<< endl;
 
-        cout <<"Masukkan pilihan (1-5)"<< endl;
+        cout << endl <<"Masukkan pilihan (1-5)"<< endl;
+        
+
     }
 }
