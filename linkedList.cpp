@@ -95,3 +95,11 @@ class list{
     }
 
 };
+
+int main(){
+
+    list mhs;
+    int nim;
+    char ch;
+    while(1)
+}
