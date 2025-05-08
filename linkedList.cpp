@@ -73,13 +73,25 @@ class list{
             previous->next = current->next;
         }
         
-        
+
         delete current;
         return true;
     }
 
     void transver(){
 
+        if (listEmpty()){
+            cout << "\nList Kosong\n";
+        }
+
+        else{
+            cout << "\nData didalam list adalah : \n";
+            node *currentNode = START;
+            while (currentNode != NULL){
+                cout << currentNode->next;
+            }
+            cout << endl;
+        }
     }
 
 };
