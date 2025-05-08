@@ -146,8 +146,14 @@ int main(){
                     cout << "\nNo Mahasiswa :" << current->noMhs << endl;
                     cout << "\n";
                 }
+            } break;
+            case '5':{}
+            break;
+            default:{
+                cout << "Pilihan salah !." << endl;
             }
-        }
+        }  break;
 
-    }
+
+    }while (ch != '5');
 }
