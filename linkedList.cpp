@@ -22,13 +22,18 @@ class list{
         cin >> nim;
 
         node *nodeBaru = new node;
-        nodeBaru -> noMhs;
+        nodeBaru -> noMhs = nim;
 
         if (START == NULL || nim <= START -> noMhs){
 
-            if ((START != NULL)&& (nim == START ->noMhs )){
+            if ((START != NULL) && (nim == START ->noMhs)){
                 cout << "\nDuplikasi noMhs tidak diijinkan\n";
                 return ;
+            }
+            nodeBaru -> next = START ;
+            START = nodeBaru ;
+            return;
+
             }
             node *previous = START;
             node *current = START;
@@ -39,10 +44,9 @@ class list{
                 }
                 previous = current ;
                 current = current -> next;
-            }
-            nodeBaru ->next = current;
-            previous ->next = nodeBaru;
-        }
+        }   nodeBaru->next = current;
+            previous->next = nodeBaru ;
+
     }
     bool listEmpty(){
         return START == NULL;
@@ -88,7 +92,8 @@ class list{
             cout << "\nData didalam list adalah : \n";
             node *currentNode = START;
             while (currentNode != NULL){
-                cout << currentNode->next;
+                cout << currentNode->noMhs << endl;
+                currentNode = currentNode->next;
             }
             cout << endl;
         }
@@ -101,7 +106,7 @@ int main(){
     list mhs;
     int nim;
     char ch;
-    while(1){
+     do{
         cout << "Menu" << endl;
         cout << endl
              << "1. Menambah data kedalam list"<< endl;
@@ -165,9 +170,8 @@ int main(){
             break;
             default:{
                 cout << "Pilihan salah !." << endl;
-            }
-        }  break;
-
+            }break;
+        }  
 
     }while (ch != '5');
 }
