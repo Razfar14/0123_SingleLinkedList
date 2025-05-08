@@ -109,5 +109,7 @@ int main(){
         cout << "3. Menampilkan semua data didalam list"<< endl;
         cout << "4. Mencari data dalam list"<< endl;
         cout << "5. Exit"<< endl;
+
+        cout <<"Masukkan pilihan (1-5)"<< endl;
     }
 }
