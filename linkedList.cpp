@@ -78,7 +78,7 @@ class list{
         return true;
     }
 
-    void transver(){
+    void transverver(){
 
         if (listEmpty()){
             cout << "\nList Kosong\n";
@@ -133,19 +133,33 @@ int main(){
                 else
                 cout << endl << "Data dengan nomor Mahasiswa" << nim << " berhasil dihapus" << endl;
 
-            }
+            }break;
 
             case '3':{
-                mhs.transver();
+                mhs.transverver();
             }
             break;
 
             case '4':{
+
                 if (mhs.listEmpty() == true){
+                    cout <<"\nList Kosong\n";
+                    break;
+                }
+                node *previous, *current;
+                cout<< endl <<"Masukkan no Mahasiswa yang dicari :"<< endl;
+                cin >> nim;
+                if (mhs.search(nim, &previous, &current) == false)
+                {
+                    cout << endl <<"Data tidak ditemukkan"<< endl;
+                }
+                
+                else{
                     cout <<endl << "Data ditemukan" << endl;
                     cout << "\nNo Mahasiswa :" << current->noMhs << endl;
                     cout << "\n";
                 }
+               
             } break;
             case '5':{}
             break;
