@@ -111,7 +111,42 @@ int main(){
         cout << "5. Exit"<< endl;
 
         cout << endl <<"Masukkan pilihan (1-5)"<< endl;
-        
+        cin >> ch;
+
+        switch(ch){
+            case '1':{
+                mhs.addNode();
+                break;
+            }
+            
+            case '2':{
+                if (mhs.listEmpty()){
+                    cout << endl << "List Kosong" << endl;
+                    break;
+                }
+                cout << endl << "\nMasukkan no Mahasiswa yang akan di hapus";
+                cin >> nim;
+                
+                if(mhs.delNode(nim) == false)
+                    cout << endl << "Data tidak ditemukan" << endl;
+                
+                else
+                cout << endl << "Data dengan nomor Mahasiswa" << nim << " berhasil dihapus" << endl;
+
+            }
+
+            case '3':{
+                mhs.transver();
+            }
+            break;
+
+            case '4':{
+                if (mhs.listEmpty() == true){
+                    cout <<endl << "Data ditemukan" << endl;
+                    cout << "\nNo Mahasiswa :" << current->noMhs << endl;
+                }
+            }
+        }
 
     }
 }
